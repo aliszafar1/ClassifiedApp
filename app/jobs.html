@@ -1,0 +1,43 @@
+<div class="container">
+	<nav>
+		<a class="btn btn-default" [routerLink]="['LoginForm']">Log out</a>
+		<a class="btn btn-default" [routerLink]="['AddMore']">Add More</a>
+	</nav>
+
+<h3>OLX where buyer meets seller</h3>
+<div class="row">
+	<div class="col-md-4">
+		<h4>Cars</h4>
+		<ul>
+			<li *ngFor="#car of cars">
+			{{car.name}}<br>
+			{{car.model}}<br>
+			{{car.price}}
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-4">
+	<h4>Mobiles</h4>
+		<ul>
+			<li *ngFor="#mobile of mobiles">
+			{{mobile.name}}<br>
+			{{mobile.model}}<br>
+			{{mobile.price}}
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-4">
+	<h4>Laptop</h4>
+		<ul>
+			<li *ngFor="#laptop of laptops">
+			{{laptop.name}}<br>
+			{{laptop.model}}<br>
+			{{laptop.price}}
+			</li>
+		</ul>	
+		</div>
+</div>
+	
+	
+</div>

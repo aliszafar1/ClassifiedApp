@@ -1,0 +1,34 @@
+<div class="container">
+<h3>Post your own Ad!</h3>
+	<form (ngSubmit)="addMore()">
+	<div class="form-group">
+		<input type="text" class="form-control" placeholder="Enter Title" [(ngModel)]="data.title">	
+	</div>
+	<div class="form-group">
+		<select class="form-control" [(ngModel)]="data.category">
+			<option selected>Select Category</option>
+			<option>Car</option>
+			<option>Motorcycle</option>
+			<option>Cycle</option>
+		</select>
+	</div>
+	<div class="form-group">
+		<input type="text" class="form-control" placeholder="Enter Price" [(ngModel)]="data.price">
+	</div>
+	<button class="btn btn-default btn-block">Add</button>
+
+</form>
+
+<button class="btn btn-default btn-block showads" (click)="onGetData()">Show Ads</button>
+	<div class="ads">
+		<p *ngIf="showDetail">Title: {{ receiveData.title}}</p>
+		<p *ngIf="showDetail">Category: {{ receiveData.category}}</p>
+		<p *ngIf="showDetail">Price: {{ receiveData.price}}</p>
+	</div>
+
+
+</div>
+
+<!--
+	 receiveData
+-->
